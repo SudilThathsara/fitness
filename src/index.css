@@ -13,3 +13,41 @@
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-heading: 'Outfit', system-ui, sans-serif;
 }
+
+
+@layer base {
+  :root {
+    --bg-color: var(--color-light-bg);
+    --surface-color: var(--color-light-surface);
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --border-color: #e2e8f0;
+  }
+
+
+  
+  .dark {
+    --bg-color: var(--color-dark-bg);
+    --surface-color: var(--color-dark-surface);
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --border-color: #334155;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
