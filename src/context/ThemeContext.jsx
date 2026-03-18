@@ -6,7 +6,7 @@ export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
-    // Check local storage or system preference on mount
+    // Check local storage
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       setTheme(savedTheme);
@@ -18,7 +18,7 @@ export const ThemeProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    // Apply theme to the html element
+    // Apply theme
     const root = window.document.documentElement;
     root.classList.remove('light', 'dark');
     root.classList.add(theme);

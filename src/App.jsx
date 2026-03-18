@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
+
     <ThemeProvider>
       <div className="min-h-screen bg-[var(--bg-color)] text-[var(--text-primary)] transition-colors duration-300">
         <Header />
@@ -23,6 +24,7 @@ function App() {
         <Footer />
       </div>
     </ThemeProvider>
+    
   );
 }
 
